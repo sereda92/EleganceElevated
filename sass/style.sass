@@ -1,0 +1,118 @@
+@import 'reset'
+@import 'font'
+@import 'variables'
+@import 'mixins'
+@import 'extend'
+
+
+//-------------------------------------
+html, body
+    font-family: $f-f-light
+    color: $color-2C2C2C
+    font-size: $f-s-20
+a
+    color: $color-2C2C2C
+._container
+    max-width: 1230px
+    margin: 0 auto
+    padding: 0 15px
+    box-sizing: content-box
+
+.wrapper
+    max-width: 1440px
+    background-image: url('/img/background/back-two.jpg')
+//-------------------------------------
+
+.header
+    
+.header-menu
+    display: flex
+    height: 140px
+    justify-content: space-between
+    // padding: 51px 0
+    align-items: center
+    
+.header-logo
+    
+.logo-link
+    @extend %Kyiv-500
+    font-size: 32px
+    color: $color-2C2C2C
+
+.header-nav
+    display: flex
+
+.header-list
+    display: flex
+    align-items: center
+    gap: 30px
+.header-item 
+
+.header-link,
+.header-user-btn
+    @extend %Kyiv-300
+    font-size: $f-s-24
+    background: none
+
+.input-btn-container
+    position: relative
+.header-input
+    width: 250px
+    height: 40px
+    border-radius: 26px
+    border: 0.5px solid $color-2C2C2C
+    background: url('/img/background/back-one.jpg')
+    padding: 0 12px
+
+
+.header-input-btn
+    background: url('/img/icon/search.svg') no-repeat
+    position: absolute
+    display: inline-block
+    width: 24px
+    height: 24px
+    top: 50%
+    right: 12px
+    transform: translate(0, -50%)
+    // width: 10px
+    // height: 10px
+    // background-color: red
+
+
+.header-user-btn
+    position: relative
+    display: flex
+    gap: 10px
+    &::after
+        content: ''
+        // position: absolute
+        display: inline-block
+        background: url('/img/icon/user.svg')
+        width: 29px 
+        height: 29px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import 'media'
