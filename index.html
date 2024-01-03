@@ -9,10 +9,80 @@
   <link href="https://myfonts.ru/myfonts?fonts=kyiv-type-serif" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/style-car.css">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="YOUR_CLIENT_ID_HERE">
   <title>EleganceElevated</title>
 </head>
+
 <body>
-  <div class="wrapper">
+  <div class="room" id="room">
+    <div class="room-container" id="room-cont">
+      <div class="close-room">
+        <div class="close-room-container" id="close-room">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="room-registr-block" id="room-reg-block">
+        <img src="/img/room/1.jpg" alt="">
+        <div class="room-registr room-registr-main " id="room-registr">
+          <h2>Створити акаунт</h2>
+          <button class="" id="room-reg-btn">Реєстрація</button>
+        </div>
+        <div class="room-in room-registr-main not-visible" id="room-in">
+          <h2>Увійти в акаунт</h2>
+          <button class="" id="room-in-btn">Вхід</button>
+        </div>
+      </div>
+      <div class="room-form " id="room-form">
+        <!-- <div class="close-form-btn close-room_active" id="close-room">
+          <span></span>
+          <span></span>
+        </div> -->
+        <div class="room-form-in" id="room-form-in">
+          <h2>Вхід</h2>
+          <form action="" class="room-gorm-block">
+            <label for="">
+              Ел. пошта або телефон
+            </label>
+            <input type="text">
+            <label for="">
+              Пароль
+            </label>
+            <input type="password">
+            <div class="room-checkbox-container">
+              <div class="room-checkbox">
+                <input class="input-checkbox" type="checkbox">
+                <p class="text-checkbock">Запям’ятати мене</p>
+              </div>
+              <a class="form-link" href="#">Нагадати пароль</a>
+            </div>
+            <button>Увійти</button>
+            <a href="#" class="log-in-google">Увійти через Google</a>
+          </form>
+        </div>
+        <div class="room-form-reg not-visible" id="room-form-reg">
+          <h2>Реєстрація</h2>
+          <form action="" class="registration-block">
+            <label for="">Ім’я</label>
+            <input type="text">
+            <label for="">Прізвище</label>
+            <input type="text">
+            <label for="">Номер телефону</label>
+            <input type="tel">
+            <label for="">Ел. пошта</label>
+            <input type="email">
+            <label for="">Придумайте пароль</label>
+            <input type="password">
+            <p>Реєструючись, ви погоджуєтеся з умовами положення про обробку і захист персональних даних та угодою користувача</p>
+            <button>Зареєструватися</button>
+            <a href="#" class="log-in-google">Увійти через Google</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper" id="wrapper">
     <header class="header _container">
       <div class="header-menu">
         <div class="header-logo">
@@ -31,14 +101,17 @@
             </li>
             <li class="header-item input-btn-container">
               <input class="header-input" type="text" placeholder="Пошук">
-              <button type="button" class="header-input-btn"></button>
+              <button type="button" class="header-input-btn">
+                <img src="/img/icon/search.svg" alt="">
+              </button>
             </li>
             <li class="header-item user-btn-container">
-              <button class="header-user-btn">Кабінет</button>
+              <button class="header-user-btn" id="room-btn">Кабінет</button>
             </li>
           </ul>
         </nav>
       </div>
+
     </header>
     <main class="main">
       <section class="_container">
@@ -186,9 +259,64 @@
           </div>
         </div>
       </section>
+      <section class="about-us">
+        <div class="_container">
+          <div class="about-us-container">
+            <h2>Про нас</h2>
+            <div class="about-us-main">
+              <div class="about-us-text">
+                <p>Від колекцій, що пропонуються на сайті, відбивається вишуканість та смак. Незалежно від того, чи ви
+                  шукаєте образ для особливого вечора, або повсякденного стилю, «EleganceElevated» має в собі те, що вам
+                  потрібно. Кожний товар належно відібраний, щоб відповідати високим стандартам, які магазин прагне
+                  забезпечити.
+                </p>
+                <div class="about-us-cont">
+                  <a href="#" class="about-us-btn">До каталогу</a>
+                </div>
+              </div>
+              <div class="about-us-img">
+                <img src="/img/about/1.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="_container">
+        <ul class="footer-list">
+          <li>
+            <a href="#" class="footer-logo">EleganceElevated</a>
+          </li>
+          <li>
+            <nav class="footer-nav">
+              <ul class="footer-nav-list">
+                <li><a href="#" class="footer-link">Каталог</a></li>
+                <li><a href="#" class="footer-link">Про нас</a></li>
+                <li><a href="#" class="footer-link">Контакти</a></li>
+                <li><a href="#" class="footer-link">Кабінет</a></li>
+              </ul>
+            </nav>
+          </li>
+          <li>
+            <ul class="footer-info">
+              <li><a href="#" class="footer-link">Оплата</a></li>
+              <li><a href="#" class="footer-link">Доставка</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="footer-soc">
+              <li><a href="#" class="footer-link">Instagram</a></li>
+              <li><a href="#" class="footer-link">Facebook</a></li>
+              <li><a href="#" class="footer-link _tel"><span>Тел.</span> +380 63 32 32 332</a></li>
+              <li><a href="#" class="footer-link _mail"><span>Email</span> EleganceElevated@gmail.com</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </footer>
   </div>
+  <script src="/js/room.js"></script>
   <script src="/js/main.js"></script>
 </body>
 

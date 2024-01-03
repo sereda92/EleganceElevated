@@ -4,6 +4,7 @@
 @import 'mixins'
 @import 'extend'
 @import 'style-car'
+@import 'room'
 
 
 //-------------------------------------
@@ -24,7 +25,11 @@ a
     margin: 0 auto
     background-image: url('/img/background/back-two.jpg')
     overflow: hidden
+    position: relative
+    transition: all .3s ease
 
+.wrapper-blur
+    filter: blur(5px)
 h2
     font-size: 48px
     font-weight: 700
@@ -76,14 +81,14 @@ h2
 
 
 .header-input-btn
-    background: url('/img/icon/search.svg') no-repeat
+    background: none
     position: absolute
-    display: inline-block
-    width: 24px
-    height: 24px
     top: 50%
     right: 12px
     transform: translate(0, -50%)
+    img
+        width: 16px
+        height: 16px
 
 
 .header-user-btn
@@ -164,13 +169,7 @@ h2
     margin-bottom: 30px
 
 .new-collection-btn
-    font-family: Montserrat
-    font-size: 32px
-    font-weight: 500
-    display: inline-flex
-    padding: 20px 80px
-    border-radius: 4px
-    border: 1px solid $color-black
+    @extend %button
 
 
 .popular-products
@@ -207,9 +206,7 @@ h2
     p
         font-family: Montserrat
         font-size: 32px
-        // font-style: normal;
         font-weight: 500
-        // line-height: normal;
         margin-bottom: 84px
 
 .chic-verse-btn-cont
@@ -217,16 +214,67 @@ h2
     align-items: end
     gap: 102px
 .chic-verse-btn
-    display: inline-flex
-    width: 362px
-    height: 79px
-    // padding: 20px 80px
-    justify-content: center
-    align-items: center
-    // gap: 10px
-    border-radius: 4px
-    border: 1px solid $color-2C2C2C
+    @extend %button
 
+//-------------------
+
+.about-us-container
+    display: flex
+    flex-direction: column
+    padding: 80px 0 90px 0
+    h2
+        margin-bottom: 50px
+.about-us-main
+    display: flex
+    justify-content: space-between
+
+.about-us-text
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    max-width: 677px
+    p
+        font-family: Montserrat
+        font-size: 28px
+        font-weight: 500
+.about-us-cont
+
+.about-us-btn
+    @extend %button
+
+.about-us-img
+
+//---------------
+.footer
+    padding: 36px 0 62px 0
+    background: url('/img/background/back-one.jpg')
+
+.footer-list
+    display: flex
+    justify-content: space-between
+
+.footer-link
+    font-size: 24px
+    font-weight: 200
+    span
+        font-family: $f-f-medium
+
+
+.footer-nav-link
+    
+.footer-logo
+    @extend %Kyiv-700
+    font-size: 32px
+    font-weight: 500
+
+
+.footer-nav-list,
+.footer-info,
+.footer-soc
+    display: flex
+    flex-direction: column
+    gap: 20px
+    margin-top: 9px
 
 
 
