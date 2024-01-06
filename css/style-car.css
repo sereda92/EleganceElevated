@@ -17,6 +17,7 @@
 }
 .Carousel .Card {
   display: flex;
+  flex-direction: column;
   padding: 16px 17px 23px 16px;
   background-color: white;
   width: 393px;
@@ -137,6 +138,7 @@
 }
 
 .Card__media {
+  display: flex;
   grid-column: 1/-1;
   grid-row: media-start/media-end;
   max-width: 100%;
@@ -146,12 +148,13 @@
 .Card__media > * {
   height: 380px;
   object-fit: cover;
-  position: absolute;
+  /* position: absolute; */
   width: 360px;
 }
 
 .Card__main {
-  align-self: end;
+  /* display: none; */
+  /* align-self: end; */
   grid-column: 1/-1;
   grid-row: main-start/main-end;
 }
