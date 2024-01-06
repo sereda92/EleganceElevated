@@ -5,6 +5,9 @@
 @import 'extend'
 @import 'style-car'
 @import 'room'
+@import 'burger'
+
+
 
 
 //-------------------------------------
@@ -39,7 +42,7 @@ h2
 //-------------------------------------
 
 .header
-    
+    position: relative
 .header-menu
     display: flex
     height: 140px
@@ -94,6 +97,7 @@ h2
 .header-user-btn
     position: relative
     display: flex
+    align-items: center
     gap: 10px
     &::after
         content: ''
@@ -149,6 +153,7 @@ h2
 
 .new-collection-bg
     position: absolute
+    height: 100%
     top: 0
     right: 0
 
@@ -212,9 +217,12 @@ h2
 .chic-verse-btn-cont
     display: flex
     align-items: end
-    gap: 102px
+    justify-content: space-between
+    gap: 30px
+    // gap: 102px
 .chic-verse-btn
     @extend %button
+    
 
 //-------------------
 
@@ -227,6 +235,7 @@ h2
 .about-us-main
     display: flex
     justify-content: space-between
+    gap: 25px
 
 .about-us-text
     display: flex
@@ -252,6 +261,8 @@ h2
 .footer-list
     display: flex
     justify-content: space-between
+    gap: 40px
+    // flex-wrap: wrap
 
 .footer-link
     font-size: 24px

@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,regular,500,600,700,800,900" rel="stylesheet" />
   <link href="https://myfonts.ru/myfonts?fonts=kyiv-type-serif" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/style-car.css">
   <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta name="google-signin-client_id" content="YOUR_CLIENT_ID_HERE">
+  <link rel="stylesheet" href="/css/style.css">
   <title>EleganceElevated</title>
 </head>
 
@@ -35,10 +35,6 @@
         </div>
       </div>
       <div class="room-form " id="room-form">
-        <!-- <div class="close-form-btn close-room_active" id="close-room">
-          <span></span>
-          <span></span>
-        </div> -->
         <div class="room-form-in" id="room-form-in">
           <h2>Вхід</h2>
           <form action="" class="room-gorm-block">
@@ -59,6 +55,7 @@
             </div>
             <button>Увійти</button>
             <a href="#" class="log-in-google">Увійти через Google</a>
+            <button class="" id="room-reg-btn-m">Реєстрація</button>
           </form>
         </div>
         <div class="room-form-reg not-visible" id="room-form-reg">
@@ -74,7 +71,8 @@
             <input type="email">
             <label for="">Придумайте пароль</label>
             <input type="password">
-            <p>Реєструючись, ви погоджуєтеся з умовами положення про обробку і захист персональних даних та угодою користувача</p>
+            <p>Реєструючись, ви погоджуєтеся з умовами положення про обробку і захист персональних даних та угодою
+              користувача</p>
             <button>Зареєструватися</button>
             <a href="#" class="log-in-google">Увійти через Google</a>
           </form>
@@ -110,8 +108,74 @@
             </li>
           </ul>
         </nav>
+        <div class="burger-btn" id="burger-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
-
+      <div class="burger-main" id="burger-main">
+        <nav class="burger-nav">
+          <ul class="burger-list">
+            <li class="burger-item">
+              <a href="#" class="burger-link burger-link-btn" id="burger-catalog-btn">Каталог
+              </a>
+              <ul class="burger-catalog-list" id="burger-catalog-list">
+                <li class="burger-catalog-item">
+                  <a href="#" class="burger-catalog-link">Сукні</a>
+                </li>
+                <li class="burger-catalog-item">
+                  <a href="#" class="burger-catalog-link">Брюки</a>
+                </li>
+                <li class="burger-catalog-item">
+                  <a href="#" class="burger-catalog-link">Спідниці</a>
+                </li>
+                <li class="burger-catalog-item">
+                  <a href="#" class="burger-catalog-link">Блузи</a>
+                </li>
+                <li class="burger-catalog-item">
+                  <a href="#" class="burger-catalog-link">Рубашки</a>
+                </li>
+                <li class="burger-catalog-item">
+                  <a href="#" class="burger-catalog-link">Жакети</a>
+                </li>
+                <li class="burger-catalog-item">
+                  <a href="#" class="burger-catalog-link">Джинси</a>
+                </li>
+              </ul>
+            </li>
+            <li class="burger-item">
+              <a href="#" class="burger-link">Про нас</a>
+            </li>
+            <li class="burger-item">
+              <a href="#" class="burger-link">Доставка</a>
+            </li>
+            <li class="burger-item">
+              <a href="#" class="burger-link">Оплата</a>
+            </li>
+            <li class="burger-item">
+              <a href="#" class="burger-link">Контакти</a>
+            </li>
+          </ul>
+          <div class="burger-footer">
+            <button id="burger-room-btn">Мій кабінет</button>
+            <div class="burger-soc-main">
+                <div class="burger-soc">
+                  <a class="burger-soc-link" href="#">Instagram</a>
+                  <a class="burger-soc-link" href="">Facebook</a>
+                </div>
+                <div class="burger-connection">
+                  <span>Тел.
+                    <a class="burger-soc-link" href="#">+380 63 32 32 332</a>
+                  </span>
+                  <span>Email
+                    <a class="burger-soc-link" href="#">EleganceElevated@gmail.com</a>
+                  </span>
+                </div>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="main">
       <section class="_container">
@@ -144,7 +208,7 @@
           <h2>Популярні товари</h2>
           <div>
             <section class="Carousel" id="carousel" tabindex="-1">
-              <h2 class="Hidden">Carousel</h2>
+              <!-- <h2 class="Hidden">Carousel</h2> -->
               <article class="Card Card--overlay Card--square" id="card-1">
                 <div class="Card__media">
                   <img class="Card__image" alt="Card image description" loading="lazy" src="/img/carousel/1.jpg">
@@ -212,7 +276,7 @@
             </section>
             <!--/Carousel-->
             <nav class="Pagination">
-              <h2 class="Hidden">Carousel Navigation</h2>
+              <!-- <h2 class="Hidden">Carousel Navigation</h2> -->
               <button class="Arrow" type="button" aria-controls="carousel" disabled>
                 <svg xmlns="http://www.w3.org/2000/svg" width="51" height="50" viewBox="0 0 51 50" fill="none"
                   role="presentation">
@@ -316,6 +380,37 @@
       </div>
     </footer>
   </div>
+  <script>
+    const burgerCatalogBtn = document.getElementById('burger-catalog-btn')
+    const burgerCatalogList = document.getElementById('burger-catalog-list')
+    const catalogBtnCont = document.getElementById('catalog-btn_container')
+    const burgerBtn = document.getElementById('burger-btn')
+    const burgerMain = document.getElementById('burger-main')
+    const burgerRoomBtn = document.getElementById('burger-room-btn')
+
+    burgerRoomBtn.addEventListener('click', function () {
+      // burgerMain.classList.toggle('burger-main_active')
+      // burgerCatalogList.classList.toggle('list_active')
+      room.classList.add('room-active')
+    })
+
+    burgerCatalogBtn.addEventListener('click', function () {
+      burgerCatalogList.classList.toggle('list_active')
+      burgerCatalogBtn.classList.toggle('catalog-btn_container-active')
+    })
+
+    burgerBtn.addEventListener('click', function(){
+      burgerMain.classList.toggle('burger-main_active')
+      burgerBtn.classList.toggle('burger-btn_activ')
+      if(burgerMain.classList.contains('burger-main_active')){
+        document.body.style.overflowY = 'hidden'
+      }else{
+        document.body.style.overflowY = 'scroll'
+      }
+    })
+
+
+  </script>
   <script src="/js/room.js"></script>
   <script src="/js/main.js"></script>
 </body>

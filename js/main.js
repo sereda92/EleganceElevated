@@ -190,11 +190,3 @@
 
 
 
-
-//----------------room-------------
-// const room = document.getElementById('room')
-// const roomBtn = document.getElementById('room-btn')
-
-// roomBtn.addEventListener('click', function(){
-//   room.classList.add('room-active')
-// })

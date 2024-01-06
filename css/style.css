@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-us-btn, .chic-verse-btn, .new-collection-btn {
   display: inline-flex;
-  width: 362px;
+  max-width: 362px;
   height: 79px;
   justify-content: center;
   align-items: center;
@@ -112,6 +112,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Montserrat;
   font-size: 32px;
   font-weight: 500;
+  flex: 1 0 auto;
+  padding: 0 10px;
 }
 
 .room {
@@ -203,7 +205,7 @@ label {
 .registration-block {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  max-width: 500px;
   transition: all 2s ease;
 }
 .room-gorm-block input,
@@ -335,7 +337,8 @@ label {
 
 .room-active {
   display: flex;
-  z-index: 100;
+  z-index: 200;
+  width: 100%;
 }
 
 .not-visible {
@@ -344,7 +347,6 @@ label {
 
 .room-form-reg,
 .room-form-in {
-  position: absolute;
   visibility: visible;
   transition: transform 1s ease;
 }
@@ -352,6 +354,159 @@ label {
 .room-registr,
 .room-in {
   transition: all 1.3s ease;
+}
+
+.burger-btn {
+  display: none;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+}
+.burger-btn span {
+  display: inline-block;
+  width: 34px;
+  height: 1px;
+  background-color: #2C2C2C;
+  transition: all 0.5s ease;
+}
+
+.burger-btn_activ span:nth-child(1) {
+  width: 0;
+  transform: translateX(15px);
+}
+.burger-btn_activ span:nth-child(3) {
+  width: 0;
+  transform: translateX(-15px);
+}
+
+.burger-main {
+  background: url("/img/background/back-two.jpg");
+  position: absolute;
+  z-index: 100;
+  top: 102px;
+  left: 100%;
+  display: none;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.4s ease;
+}
+
+.burger-main_active {
+  left: 0;
+}
+
+.burger-nav {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.burger-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.burger-item {
+  width: 100%;
+}
+
+.burger-catalog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  min-height: 0;
+  transition: all 0.3s ease;
+}
+
+.list_active {
+  visibility: visible;
+  opacity: 1;
+  padding: 10px 0 15px 0;
+  min-height: 300px;
+}
+
+.burger-catalog-item {
+  padding: 4px 10px;
+}
+
+.burger-link {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  align-items: center;
+  border-radius: 33px;
+  border: 1px solid #000;
+}
+
+.burger-link-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.burger-link-btn::after {
+  content: url("/img/icon/catalog-arrow.svg");
+  display: inline-block;
+  height: 34px;
+  transition: all 0.4s ease;
+  transform: rotate(180deg);
+}
+
+.catalog-btn_container-active::after {
+  transform: rotate(0deg);
+}
+
+.burger-footer {
+  display: flex;
+  flex-direction: column;
+}
+.burger-footer button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 40px;
+  background: none;
+}
+
+.burger-soc,
+.burger-connection {
+  display: flex;
+}
+
+.burger-connection {
+  flex-direction: column;
+  margin-top: 17px;
+  gap: 12px;
+}
+.burger-connection span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.burger-soc-link {
+  font-weight: 400;
+}
+
+.burger-soc-main {
+  margin-top: 35px;
+}
+
+.burger-soc {
+  gap: 30px;
+}
+.burger-soc a {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
 }
 
 html, body {
@@ -387,6 +542,10 @@ a {
 h2 {
   font-size: 48px;
   font-weight: 700;
+}
+
+.header {
+  position: relative;
 }
 
 .header-menu {
@@ -445,6 +604,7 @@ h2 {
 .header-user-btn {
   position: relative;
   display: flex;
+  align-items: center;
   gap: 10px;
 }
 .header-user-btn::after {
@@ -503,6 +663,7 @@ h2 {
 
 .new-collection-bg {
   position: absolute;
+  height: 100%;
   top: 0;
   right: 0;
 }
@@ -573,7 +734,8 @@ h2 {
 .chic-verse-btn-cont {
   display: flex;
   align-items: end;
-  gap: 102px;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 .about-us-container {
@@ -588,6 +750,7 @@ h2 {
 .about-us-main {
   display: flex;
   justify-content: space-between;
+  gap: 25px;
 }
 
 .about-us-text {
@@ -610,6 +773,7 @@ h2 {
 .footer-list {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .footer-link {
@@ -637,5 +801,104 @@ h2 {
 @media (max-width: 1300px) {
   .new-collection-img {
     display: none;
+  }
+}
+@media (max-width: 1200px) {
+  .header-link,
+.header-user-btn {
+    font-size: 18px;
+  }
+  .header-input {
+    width: 200px;
+  }
+  .logo-link {
+    font-size: 28px;
+  }
+  .chic-verse-btn-cont {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .chic-verse-main {
+    justify-content: space-between;
+  }
+  .chic-verse-btn-cont img {
+    display: none;
+  }
+  .footer-link {
+    font-size: 18px;
+  }
+  .footer-logo {
+    font-size: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .header-menu {
+    height: 96px;
+  }
+  .header-nav {
+    display: none;
+  }
+  ._container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .burger-btn {
+    display: flex;
+  }
+  .chic-verse-container {
+    flex-direction: column-reverse;
+  }
+  .chic-verse-btn-cont img {
+    display: block;
+  }
+  .chic-verse-main h2 {
+    justify-content: center;
+  }
+  .chic-verse-btn-cont {
+    align-items: flex-end;
+  }
+  .chic-verse-img {
+    display: inline-block;
+    max-width: 498px;
+    transform: translate(0, -64%);
+  }
+  .chic-verse-img {
+    display: none;
+  }
+  .chic-verse-btn-cont {
+    flex-direction: row;
+  }
+  .chic-verse-btn-cont img {
+    display: flex;
+    max-width: 100%;
+    flex: 1 0 auto;
+  }
+  .about-us-main {
+    flex-direction: column-reverse;
+  }
+  .about-us-cont {
+    display: none;
+  }
+  .first-page-title {
+    font-size: 36px;
+  }
+  .room-registr-block {
+    display: none;
+  }
+  .room-form {
+    width: 100%;
+  }
+  .room-gorm-block,
+.registration-block {
+    max-width: 100%;
+  }
+  .burger-main {
+    display: block;
+  }
+}
+@media (max-width: 360px) {
+  .logo-link {
+    font-size: 16px;
   }
 }/*# sourceMappingURL=style.css.map */
