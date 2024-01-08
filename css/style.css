@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
 .about-us-btn, .chic-verse-btn, .new-collection-btn {
   display: inline-flex;
   max-width: 362px;
-  height: 79px;
+  min-height: 79px;
   justify-content: center;
   align-items: center;
   border-radius: 4px;
@@ -388,6 +388,7 @@ label {
   display: none;
   width: 100%;
   height: 100vh;
+  overflow-x: auto;
   transition: all 0.4s ease;
 }
 
@@ -938,6 +939,55 @@ h2 {
   .popular-products h2 {
     font-family: KyivTypeSans-700;
     font-size: 28px;
+  }
+  .chic-verse-main h2 {
+    font-size: 28px;
+    font-family: KyivTypeSans-700;
+  }
+  .chic-verse-main h2 {
+    margin-bottom: 16px;
+  }
+  .chic-verse-main p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .chic-verse-container {
+    padding: 20px 0;
+  }
+  .chic-verse-btn {
+    font-size: 18px;
+    min-height: 40px;
+  }
+  .chic-verse-btn-cont img {
+    min-width: 150px;
+    flex: 1 1 auto;
+  }
+  .about-us-img {
+    display: flex;
+  }
+  .about-us-img img {
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
+  .about-us-container h2 {
+    font-size: 28px;
+    font-family: KyivTypeSans-700;
+    margin-bottom: 28px;
+  }
+  .about-us-text p {
+    font-size: 14px;
+  }
+  .room-form {
+    padding: 63px 20px;
+  }
+  .room-form-in h2 {
+    font-size: 28px;
+    font-family: KyivTypeSans-700;
+    margin-bottom: 28px;
+  }
+  .room-gorm-block input {
+    height: 40px;
   }
 }
 @media (max-width: 480px) {
